@@ -1,0 +1,70 @@
+/target
+/classes
+/checkouts
+profiles.clj
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+/.prepl-port
+.hgignore
+.hg/
+
+#Jax Added
+/.clj-kondo/.cache/
+/.clj-kondo/http-kit/
+/.lsp/
+
+
+/lib
+/.env
+/.calva/output-window/
+/.shadow-cljs
+/node_modules
+/log
+/.VSCodeCounter
+render.scad
+/.
+
+#Added by electric
+/resources/public/TemplateElectric/js
+/resources/electric-manifest.edn
+/target
+.DS_Store
+
+#Added from deps-new defaults...
+.classpath
+.clj-kondo/.cache
+.cpcache
+.eastwood
+.factorypath
+.java-version
+.lein-*
+.lsp/.cache
+.lsp/sqlite.db
+.nrepl-history
+.nrepl-port
+.portal/vs-code.edn
+.project
+.rebel_readline_history
+.settings
+.socket-repl-port
+.sw*
+*.class
+*.jar
+*.swp
+*~
+/checkouts
+/classes
+
+#Only exclude these if needed with different environments
+#dev-config.edn
+#test-config.edn
+
+
+#If adding to this list, you need to remove tracked files from git and then readd them 
+# with the two terminal cmds below (periods are important)
+#     git rm -rf --cached .
+#     git add .

@@ -1,0 +1,58 @@
+{
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ],
+    "calva.customREPLCommandSnippets": [
+        {
+            "name": "Kindly-submit-context",
+            "key": "kp",
+            "snippet": "(do (require '[scicloj.kind-portal.v1.api :as kp]) (kp/kindly-submit-context {:form (quote $current-form)}))"
+        }],
+    "calva.replConnectSequences": [
+        {
+            "name": "TemplateElectricDeps",
+            "projectType": "deps.edn",
+            "afterCLJReplJackInCode": "(in-ns 'user) (println \"Setting up Portal...\") (KP/open) (KP/close) (dev/-main)",
+            "autoSelectForJackIn": true,
+            "autoSelectForConnect": true,
+            "nReplPortFile": [".nrepl-port"],
+            "cljsType": "none",
+            "menuSelections": {
+                "cljAliases": [":dev"]
+             }
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#0071e6",
+        "activityBar.background": "#0071e6",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#ff80be",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#0071e6",
+        "statusBar.background": "#0058b3",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#0071e6",
+        "statusBarItem.remoteBackground": "#0058b3",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#0058b3",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#0058b399",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#0058b3",
+
+    "tailwindCSS.experimental.classRegex": [
+        ":class\\s+\"([^\"]*)\""
+        ":class\\s+\\(str\\s+\"([^\"]*)\""
+        "Style\\s+\"([^\"]*)\""
+      ],
+
+    "tailwindCSS.includeLanguages": {
+        "clojure": "html"
+      },
+      "editor.quickSuggestions": {
+        "strings": "on"
+      }
+}

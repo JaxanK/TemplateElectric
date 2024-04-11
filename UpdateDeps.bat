@@ -1,0 +1,1 @@
+java -jar C:\workspace\depsupdater\target\net.clojars.jaxank\DepsUpdater-0.1.0-SNAPSHOT.jar -p C:\\Workspace\\TemplateElectric\\deps.edn -n "jaxank"

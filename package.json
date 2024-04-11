@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@multiplyco/tailwind-clj": "^1.0.3"
+  }
+}

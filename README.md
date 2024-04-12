@@ -65,7 +65,7 @@ program, then you can use the release directory as a network or cloud folder and
 get most of the benefits of a continuous delivery pipeline without needing to
 bug your users to install a patch with each bug fix.
 
-# Electric Starter App
+# Electric Starter App (Original ReadMe Documentation)
 
 A minimal Electric Clojure app, and instructions on how to integrate it into an
 existing app. For more demos and examples, see [Electric
@@ -122,7 +122,7 @@ Consequently, you need **robust cache invalidation** in prod!
   * Notice that [src/TemplateElectric/server_jetty.clj](src/TemplateElectric/server_jetty.clj) -> `wrap-index-page` reads `:manifest-path` from config. The config comes from [src-prod/prod.cljc](src-prod/prod.cljc).
 
 
-# Other Suggestions based on my personal preference
+# Other Suggestions from my Personal Preferences
 
 ### VS Code Settings.json file
 ```JSON
@@ -167,11 +167,12 @@ Consequently, you need **robust cache invalidation** in prod!
     }
 }
 ```
-I disable Paredit and autoclosing of brackets and quotes by default
+I disable Paredit and autoclosing of brackets and quotes since I don't like
+those features. I think they are a bit distracting for new programmers as well
 
-I like Fira Code as an addon since it adds ligatures to the code and can help
+I like Fira Code as a font since it adds ligatures to the code and can help
 with readability. You will need to install Fira Code on your machine for this
-font to work
+font to work.
 
 I also added the extension Replace Rules (bhughes339.replacerules) and this
 gives me the ability to quickly fix the path delimiters when copying directory
@@ -179,4 +180,4 @@ paths.
 
 I also use the extension Rewrap (stkb.rewrap) which gives the ability to use
 Alt-q to wrap text when editing markdown files and comment strings when writting
-longer comments in clojure
+longer comments in clojure.

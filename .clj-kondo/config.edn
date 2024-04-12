@@ -5,10 +5,7 @@
            hyperfiddle.electric/fn   clojure.core/fn
 
            jaxank.ExtensionLibs.JaxExtension/deflet clojure.core/let
-           jaxank.ExtensionLibs.JaxExtension/maplet clojure.core/let
-           ghostwheel.core/>defn clojure.core/defn
-           ghostwheel.core/>fdef clojure.core/defn
-           ghostwheel.core/>defn- clojure.core/defn-}
+           jaxank.ExtensionLibs.JaxExtension/maplet clojure.core/let}
  :linters {:redundant-expression {:level :off}
            :var-same-name-except-case {:level :off}
            :clojure-lsp/unused-public-var {:level :off}

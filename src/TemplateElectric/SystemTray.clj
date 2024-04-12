@@ -3,7 +3,6 @@
             [clj-systemtray.core :as tray]
             [TemplateElectric.version :as ver]
             [TemplateElectric.ApplicationControls :as AppCntrls]
-            [TemplateElectric.V1.Run :as run]
             )
   (:import ;[java.awt SystemTray TrayIcon Toolkit PopupMenu MenuItem Menu]
            [java.awt.event ActionListener]))
@@ -11,7 +10,7 @@
 
 (def Icon (atom nil))
 
-(def IconPath "TemplateElectricLogo1.png") ; Must be a .PNG, JPEG, or there is one other file type, but not an .ico file!
+(def IconPath "Logo1.png") ; Must be a .PNG, JPEG, or there is one other file type, but not an .ico file!
 (def IconTooltip "TemplateElectric Server")
 
 (defn MainClickFn "the main function to call on a left click of the icon" [_event]
@@ -19,17 +18,16 @@
   (je/OpenInDefaultBrowser "http://localhost:8080/"))
 
 (def PopupMenu (tray/popup-menu
-                 
-                 (tray/menu-item "Open GUI in Browser" MainClickFn)
-                 (tray/separator)
-                 (tray/menu-item (str "TemplateElectric version: " ver/version) (fn [_] ))
-                 (tray/separator)
-                 (tray/menu "Commands"
-                   (tray/menu-item "Start Controller" (fn [& _] (run/StartControllerCLJR)))
-                   (tray/menu-item "End Controller"   (fn [& _] (run/StopControllerCLJR)))
-                   (tray/separator)
-                   (tray/menu-item "Kill Controller"  (fn [& _] (run/EndControllerCljr))))
-                   (tray/menu-item "Exit TemplateElectric" (fn [& _] (println "Ending TemplateElectric") (AppCntrls/EndTemplateElectric)))))
+                (tray/menu-item "Open GUI in Browser" MainClickFn)
+                (tray/separator)
+                (tray/menu-item (str "TemplateElectric version: " ver/version) (fn [_]))
+                (tray/separator)
+                (tray/menu "Commands"
+                           (tray/menu-item "Command 1" (fn [& _] (println "Command 1 Run")))
+                           (tray/menu-item "Command 2"   (fn [& _] (println "Command 2 Run")))
+                           (tray/separator)
+                           (tray/menu-item "Command 3"  (fn [& _] (println "Command 3 Run"))))
+                (tray/menu-item "Exit Program" (fn [& _] (println "Ending TemplateElectric") (AppCntrls/EndTemplateElectric)))))
 
 
 (defn StartSystemTray! "Call this to start the SystemTray Icon and Submenu (will automatically replace existing TrayIcon)" []

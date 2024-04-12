@@ -3,7 +3,6 @@
    #?(:clj [clojure.edn :as edn])
    #?(:clj [clojure.java.io :as io])
    #?(:clj [clojure.tools.logging :as log])
-   #?(:clj [TemplateElectric.CljfxGUI.GUILoader :as gui])
    #?(:clj [TemplateElectric.ApplicationControls :as AppControls])
    #?(:clj [TemplateElectric.SystemTray :as SystemTray])
    [contrib.assert :refer [check]]
@@ -12,11 +11,10 @@
    [hyperfiddle.electric :as e])
   #?(:cljs (:require-macros [prod :refer [compile-time-resource]])))
 
-#?(:clj (defn oldmain  "main function to start program"  [& _args]
-          (println "ProgramLaunchComplete")
+#?(:clj (defn TemplateElectricMain  "main function to start program"  [& _args]
+          (println "ProgramLaunchComplete") ; Works with starter app splash screen (another repo of mine)
           (println "Starting TemplateElectric Command Line Program...")
           (swap! AppControls/RunningProgramState assoc :Profile :Prod)
-          (gui/RenderSetupAndRun)
           ))
 
    (defmacro compile-time-resource [filename] (some-> filename io/resource slurp edn/read-string))
@@ -46,8 +44,7 @@
         
         (SystemTray/StartSystemTray!)
 
-        ;Start CLJFX GUI (To be removed at some point)
-        (oldmain)))
+        (TemplateElectricMain)))
 
 ;;; Prod client entrypoint
 

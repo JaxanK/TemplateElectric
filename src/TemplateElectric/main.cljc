@@ -22,6 +22,9 @@
 ;#?(:clj (defonce version ver/version))
 (e/def DisplayVersion (e/server ver/version))
 
+; LEts say that I have a really long comment string and I am ramble on and it
+; gets annoyient line fdfsfksdsofdsonfdonoifdng kfnslflkfsknflk
+
 
 #?(:cljs 
    (defonce GUIState! (atom {:ActiveTab :Tab1
@@ -105,7 +108,8 @@
               :Tab3 (tab3/Tab.)
               :Tab4 (tab4/Tab.)
               ))
-          (Console.))
+          ;(Console.)
+          )
         (do
           ;(dom/h1 (dom/text "Prompt"))
           (prompt/PromptElecticCode.))))))
